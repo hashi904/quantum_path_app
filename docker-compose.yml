@@ -5,6 +5,7 @@ services:
     command: /bin/sh -c "rm -f tmp/pids/server.pid && bundle exec rails s -p 3021 -b '0.0.0.0'"
     environment:
       - RAILS_ENV=development
+      - BUNDLE_WITHOUT=production
     volumes:
       - .:/app
     ports:
